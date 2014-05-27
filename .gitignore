@@ -19,3 +19,11 @@
 *.exe
 *.out
 *.app
+
+# User Infomation
+*.suo
+*.filters
+
+# Output folder
+Debug/
+Release/
