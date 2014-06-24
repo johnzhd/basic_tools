@@ -11,7 +11,7 @@
 template<typename T_SIZE>
 T_SIZE core_count()
 {  
-	T_SIZE count = 1; // жаиыр╩╦Ж  
+	T_SIZE count = 1; // О©╫О©╫О©╫О©╫р╩О©╫О©╫  
 #ifndef _WINDOWS_
 	count = sysconf(_SC_NPROCESSORS_CONF);
 #else
@@ -22,3 +22,9 @@ T_SIZE core_count()
 	return count;
 }
 
+template<typename T_SIZE>
+T_SIZE thread_count()
+{
+	size_t ret = std::thread::hardware_concurrency();
+	return ret > 0? ret : 1;
+}
